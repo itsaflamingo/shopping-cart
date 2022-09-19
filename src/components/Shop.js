@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import '../styles/Shop.css';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Items from './Items';
 import itemsArray from './shop-items'
 
 
 function Shop() {
   const [items] = useState(itemsArray);
-  console.log(items);
 
   const nav = useNavigate();
 
@@ -16,7 +15,7 @@ function Shop() {
   }
 
   return (
-    <div className="Shop">
+    <div className="shop">
       <h2>Shop</h2>
       <button onClick={navHome}>Home</button>
       <Items items={items} /> 

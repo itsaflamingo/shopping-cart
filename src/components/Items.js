@@ -2,10 +2,8 @@ import React from 'react';
 
 function Items(props) {
 
-    console.log(props)
-
   return (
-    <div className="Items">
+    <div className="items">
             {props.items.map((item) => {
                 return (
                     <div className='item' key={item.id}>

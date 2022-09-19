@@ -11,7 +11,7 @@ function Homepage() {
   return (
     <div className="App">
           <h2>Homepage</h2>
-          <button onClick={navToShop}>Button</button>
+          <button onClick={navToShop}>Shop</button>
     </div>
   );
 }
