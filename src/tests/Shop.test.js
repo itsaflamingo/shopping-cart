@@ -9,7 +9,7 @@ import { act } from "react-dom/test-utils";
 // shop renders
 describe('Shop component', () => {
     it('renders correct heading', () => {
-        const {getByRole} = render(
+        render(
             <Router>
                 <Shop />
             </Router>)
@@ -27,6 +27,7 @@ describe('Shop component', () => {
         });
         expect(window.location.pathname).toEqual('/');
     })
+
 })
 // button leads to home
 

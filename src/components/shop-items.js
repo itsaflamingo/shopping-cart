@@ -1,8 +1,6 @@
 import uniqid from 'uniqid'
 
 function ItemFactory(image, name, price) {
-    let quantity;
-    const addOne = () => quantity+1;
 
     return {
         image,
@@ -10,11 +8,10 @@ function ItemFactory(image, name, price) {
         price,
         quantity: 0,
         id: uniqid(),
-        addOne
     }
 }
 
-const items = [
+const itemsMade = [
     ItemFactory('url1', 'name1', 'price1'),
     ItemFactory('url2', 'name2', 'price2'),
     ItemFactory('url3', 'name3', 'price3'),
@@ -26,5 +23,5 @@ const items = [
 
 
 
-export default items;
+export {itemsMade};
 

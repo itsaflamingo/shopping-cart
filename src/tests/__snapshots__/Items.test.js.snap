@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
+<DocumentFragment>
+  <div
+    class="items"
+  >
+    <div
+      class="item"
+    >
+      <p>
+        name1
+      </p>
+      <button>
+        Add to Cart
+      </button>
+    </div>
+    <div
+      class="item"
+    >
+      <p>
+        name2
+      </p>
+      <button>
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shop items Renders items on page 1`] = `
+<div>
+  <div
+    class="items"
+  >
+    <div
+      class="item"
+    >
+      <p>
+        name1
+      </p>
+      <button>
+        Add to Cart
+      </button>
+    </div>
+    <div
+      class="item"
+    >
+      <p>
+        name2
+      </p>
+      <button>
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+`;
