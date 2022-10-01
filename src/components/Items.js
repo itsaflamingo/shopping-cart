@@ -5,10 +5,42 @@ function Items(props) {
 
   const [closeCart, setCloseCart] = useState(true);
   const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+  const [item, setItem] = useState();
 
-  const addToCart = (e, item) => {
-    setCart(cart.concat(item)) 
+  useEffect(() => {
+    setQuantity(0);
+  }, [item])
+
+  const addToCart = (e, item) => setCart(cart.concat(item)) 
+
+  const updateQuantity = () => {
+    const increaseQuantity = (e, item, num) => {
+      if(item.quantity !== 0) setQuantity(item.quantity);
+      setQuantity(num+1);
+      updateObj(e, item);
+    };
+    
+    const decreaseQuantity = (e, item, num) => {
+      if(item.quantity === 0) return;
+      setQuantity(item.quantity);
+      setQuantity(num-1);
+      updateObj(e, item);
+    };
+    
+    return {
+      increaseQuantity,
+      decreaseQuantity,
+    }
   }
+
+  const updateObj = (e, item) => {
+    if(e === undefined) return;
+      item.quantity = quantity;
+      setItem(item);
+      console.log(item)
+  }
+
   
   return (
     <div className="items">
@@ -21,7 +53,7 @@ function Items(props) {
                     </div>
                 )
             })}
-            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} />}
+            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} updateQuantity={updateQuantity} quantity={quantity} updateObj={updateObj} />}
     </div>
   );
 }

@@ -6,37 +6,6 @@ import {itemsMade} from './shop-items';
 
 function AddToCart(props) {
 
-  const [quantity, setQuantity] = useState(0);
-
-  const updateQuantity = () => {
-    const increaseQuantity = (e, num) => {
-      setQuantity(num+1)
-      console.log(quantity)
-      updateObj(e)
-    }
-    const decreaseQuantity = (num) => setQuantity(num-1);
-    const updateObj = (e) => {
-      if(e === undefined) return;
-      const name = e.target.name;
-      console.log(e.target.name);
-      itemsMade.forEach(item => {
-        if(item.name === name) {
-          item.quantity = quantity;
-        }
-        else {
-          return;
-        }
-        console.log(item)
-      })
-    }
-
-    return {
-      increaseQuantity,
-      decreaseQuantity,
-      updateObj
-    }
-  }
-
   return (
     <div id='cart' role='cart' aria-describedby="modal">
       <div>
@@ -49,10 +18,16 @@ function AddToCart(props) {
             <div className='picture' id='cart-picture'></div>
             <h3 className='item-name'>{item.name}</h3>
             <h4 className='price'>{item.price}</h4>
-            <div id='item-counter'>{item.quantity}</div>
+            <input id='item-counter' 
+                  name = {item.name}
+                  onChange={(e) => props.updateObj(e, item)} 
+                  value={item.quantity} />
             <div id='plus-minus-item'>
-              <button id='add' name={item.name} onClick={(e) => updateQuantity().increaseQuantity(e, quantity)}>+</button>
-              <button id='remove' onClick={() => updateQuantity().decreaseQuantity(quantity)}>-</button>
+              <button id='add' 
+                      value={item.quantity} 
+                      onClick={(e) => props.updateQuantity().increaseQuantity(e, item, props.quantity)}>+</button>
+              <button id='remove' 
+                      onClick={(e) => props.updateQuantity().decreaseQuantity(e, item, props.quantity)}>-</button>
             </div>
           </div>
         )

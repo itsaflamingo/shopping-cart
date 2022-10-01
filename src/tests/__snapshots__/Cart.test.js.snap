@@ -32,17 +32,17 @@ exports[`Cart component Renders items on page 1`] = `
       >
         price1
       </h4>
-      <div
+      <input
         id="item-counter"
-      >
-        0
-      </div>
+        name="name1"
+        value="0"
+      />
       <div
         id="plus-minus-item"
       >
         <button
           id="add"
-          name="name1"
+          value="0"
         >
           +
         </button>
@@ -70,17 +70,17 @@ exports[`Cart component Renders items on page 1`] = `
       >
         price2
       </h4>
-      <div
+      <input
         id="item-counter"
-      >
-        0
-      </div>
+        name="name2"
+        value="0"
+      />
       <div
         id="plus-minus-item"
       >
         <button
           id="add"
-          name="name2"
+          value="0"
         >
           +
         </button>
@@ -108,17 +108,17 @@ exports[`Cart component Renders items on page 1`] = `
       >
         price3
       </h4>
-      <div
+      <input
         id="item-counter"
-      >
-        0
-      </div>
+        name="name3"
+        value="0"
+      />
       <div
         id="plus-minus-item"
       >
         <button
           id="add"
-          name="name3"
+          value="0"
         >
           +
         </button>
