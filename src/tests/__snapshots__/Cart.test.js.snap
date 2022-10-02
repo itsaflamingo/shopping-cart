@@ -21,6 +21,7 @@ exports[`Cart component Renders items on page 1`] = `
       <div
         class="picture"
         id="cart-picture"
+        style="background-image: url(url1); background-size: contain; background-repeat: no-repeat;"
       />
       <h3
         class="item-name"
@@ -30,6 +31,7 @@ exports[`Cart component Renders items on page 1`] = `
       <h4
         class="price"
       >
+        $
         price1
       </h4>
       <input
@@ -38,7 +40,7 @@ exports[`Cart component Renders items on page 1`] = `
         value="0"
       />
       <div
-        id="plus-minus-item"
+        id="item-quantity"
       >
         <button
           id="add"
@@ -59,6 +61,7 @@ exports[`Cart component Renders items on page 1`] = `
       <div
         class="picture"
         id="cart-picture"
+        style="background-image: url(url2); background-size: contain; background-repeat: no-repeat;"
       />
       <h3
         class="item-name"
@@ -68,6 +71,7 @@ exports[`Cart component Renders items on page 1`] = `
       <h4
         class="price"
       >
+        $
         price2
       </h4>
       <input
@@ -76,7 +80,7 @@ exports[`Cart component Renders items on page 1`] = `
         value="0"
       />
       <div
-        id="plus-minus-item"
+        id="item-quantity"
       >
         <button
           id="add"
@@ -97,6 +101,7 @@ exports[`Cart component Renders items on page 1`] = `
       <div
         class="picture"
         id="cart-picture"
+        style="background-image: url(url3); background-size: contain; background-repeat: no-repeat;"
       />
       <h3
         class="item-name"
@@ -106,6 +111,7 @@ exports[`Cart component Renders items on page 1`] = `
       <h4
         class="price"
       >
+        $
         price3
       </h4>
       <input
@@ -114,7 +120,7 @@ exports[`Cart component Renders items on page 1`] = `
         value="0"
       />
       <div
-        id="plus-minus-item"
+        id="item-quantity"
       >
         <button
           id="add"

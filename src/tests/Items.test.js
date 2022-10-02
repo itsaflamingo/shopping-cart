@@ -9,11 +9,11 @@ import Items from '../components/Items'
 describe('Shop items', () => {
 
     const items = [{
-        name:'name1',
+        title:'name1',
         id:'1'
     },
     {
-        name: 'name2',
+        title: 'name2',
         id: '2'}]
 
     it('Renders items on page', () => {
@@ -49,4 +49,6 @@ describe('Shop items', () => {
         const name = screen.getAllByText('name1');
         expect(name[1].innerHTML).toBe('name1');
     })
+    test.todo('when item quantity is changed, quantity displayed changes to correct amount')
+
 })

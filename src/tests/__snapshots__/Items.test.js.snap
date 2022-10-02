@@ -8,22 +8,46 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
     <div
       class="item"
     >
-      <p>
-        name1
-      </p>
-      <button>
-        Add to Cart
-      </button>
+      <div
+        class="image"
+        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+      >
+        <button>
+          Add to Cart
+        </button>
+      </div>
+      <div
+        class="item-info"
+      >
+        <p>
+          name1
+        </p>
+        <p>
+          $
+        </p>
+      </div>
     </div>
     <div
       class="item"
     >
-      <p>
-        name2
-      </p>
-      <button>
-        Add to Cart
-      </button>
+      <div
+        class="image"
+        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+      >
+        <button>
+          Add to Cart
+        </button>
+      </div>
+      <div
+        class="item-info"
+      >
+        <p>
+          name2
+        </p>
+        <p>
+          $
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -37,22 +61,46 @@ exports[`Shop items Renders items on page 1`] = `
     <div
       class="item"
     >
-      <p>
-        name1
-      </p>
-      <button>
-        Add to Cart
-      </button>
+      <div
+        class="image"
+        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+      >
+        <button>
+          Add to Cart
+        </button>
+      </div>
+      <div
+        class="item-info"
+      >
+        <p>
+          name1
+        </p>
+        <p>
+          $
+        </p>
+      </div>
     </div>
     <div
       class="item"
     >
-      <p>
-        name2
-      </p>
-      <button>
-        Add to Cart
-      </button>
+      <div
+        class="image"
+        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+      >
+        <button>
+          Add to Cart
+        </button>
+      </div>
+      <div
+        class="item-info"
+      >
+        <p>
+          name2
+        </p>
+        <p>
+          $
+        </p>
+      </div>
     </div>
   </div>
 </div>

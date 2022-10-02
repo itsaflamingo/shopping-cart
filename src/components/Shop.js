@@ -22,11 +22,12 @@ function Shop() {
     nav('/')
   }
 
-
   return (
     <div className="shop">
-      <h2>Shop</h2>
-      <button onClick={navHome}>Home</button>
+      <div id='shop-header'>
+        <h2>Shop</h2>
+        <button onClick={navHome}>Home</button>
+      </div>
       <Items items={items} /> 
     </div>
   );

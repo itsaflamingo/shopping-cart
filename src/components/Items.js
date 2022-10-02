@@ -23,10 +23,10 @@ function Items(props) {
       console.log(quantity)
     };
     
-    const decreaseQuantity = (e, item, num) => {
+    const decreaseQuantity = (e, item) => {
       if(item.quantity === 0) return;
       setQuantity(item.quantity);
-      setQuantity(num-1);
+      setQuantity(quantity-1);
       updateObj(e, item);
     };
     
@@ -45,10 +45,20 @@ function Items(props) {
     <div className="items">
             {props.items.map((item) => {
                 return (
-                    <div className='item' key={item.id} 
-                    onClick={() => setCloseCart(false)}>
-                        <p>{item.name}</p>
-                        <button onClick={e => addToCart(e, item)}>Add to Cart</button>
+                    <div className='item' 
+                          key={item.id} 
+                          onClick={() => setCloseCart(false)}>
+                        <div className='image' style={{
+                            backgroundImage: `url(${item.image})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat'
+                          }}>
+                            <button onClick={e => addToCart(e, item)}>Add to Cart</button>
+                          </div>
+                        <div className='item-info'>
+                          <p>{item.title}</p>
+                          <p>${item.price}</p>
+                        </div>
                     </div>
                 )
             })}

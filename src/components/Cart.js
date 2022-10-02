@@ -14,14 +14,19 @@ function AddToCart(props) {
       {props.items.map((item) => {
         return(
           <div className='cart-item' key={item.id}>
-            <div className='picture' id='cart-picture'></div>
+            <div className='picture' id='cart-picture'
+            style={{
+              backgroundImage: `url(${item.image})`,
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat'
+            }}></div>
             <h3 className='item-name'>{item.name}</h3>
-            <h4 className='price'>{item.price}</h4>
+            <h4 className='price'>${item.price}</h4>
             <input id='item-counter' 
                   name = {item.name}
                   onChange={(e) => props.updateObj(e, item)} 
                   value={item.quantity} />
-            <div id='plus-minus-item'>
+            <div id='item-quantity'>
               <button id='add' 
                       value={item.quantity} 
                       onClick={(e) => props.updateQuantity().increaseQuantity(e, item)}>+</button>
