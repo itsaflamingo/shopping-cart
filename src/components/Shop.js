@@ -2,11 +2,19 @@ import React, {useState, useEffect} from 'react';
 import '../styles/Shop.css';
 import { useNavigate } from 'react-router-dom';
 import Items from './Items';
-import {itemsMade} from './shop-items'
-
 
 function Shop() {
-  const [items, setItems] = useState(itemsMade);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    shopItems()
+  }, [])
+
+  const shopItems = () => {
+    fetch('https://fakestoreapi.com/products/')
+            .then(res=>res.json())
+            .then(json=>setItems(json))
+  }
 
   const nav = useNavigate();
 

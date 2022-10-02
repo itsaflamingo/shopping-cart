@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Items from './Items';
-import {itemsMade} from './shop-items';
 
 
 function AddToCart(props) {
