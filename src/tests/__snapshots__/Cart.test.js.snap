@@ -54,6 +54,11 @@ exports[`Cart component Renders items on page 1`] = `
           -
         </button>
       </div>
+      <div
+        id="total"
+      >
+        $
+      </div>
     </div>
     <div
       class="cart-item"
@@ -94,6 +99,11 @@ exports[`Cart component Renders items on page 1`] = `
           -
         </button>
       </div>
+      <div
+        id="total"
+      >
+        $
+      </div>
     </div>
     <div
       class="cart-item"
@@ -133,6 +143,11 @@ exports[`Cart component Renders items on page 1`] = `
         >
           -
         </button>
+      </div>
+      <div
+        id="total"
+      >
+        $
       </div>
     </div>
   </div>

@@ -33,6 +33,7 @@ function AddToCart(props) {
               <button id='remove' 
                       onClick={(e) => props.updateQuantity().decreaseQuantity(e, item, props.quantity)}>-</button>
             </div>
+            <div id='total'>Total: ${props.total}</div>
           </div>
         )
       })}

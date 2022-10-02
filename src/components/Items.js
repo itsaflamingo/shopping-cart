@@ -7,6 +7,7 @@ function Items(props) {
   const [cart, setCart] = useState([]);
   const [quantity, setQuantity] = useState(1);
   const [item, setItem] = useState();
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     setQuantity(1);
@@ -39,6 +40,7 @@ function Items(props) {
   const updateObj = (e, item) => {
     if(e === undefined) return;
       item.quantity = quantity;
+      setTotal(total + item.price);
   }
 
   return (
@@ -62,7 +64,7 @@ function Items(props) {
                     </div>
                 )
             })}
-            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} updateQuantity={updateQuantity} quantity={quantity} updateObj={updateObj} />}
+            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} updateQuantity={updateQuantity} quantity={quantity} updateObj={updateObj} total={total} />}
     </div>
   );
 }
