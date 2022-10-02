@@ -5,20 +5,22 @@ function Items(props) {
 
   const [closeCart, setCloseCart] = useState(true);
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [item, setItem] = useState();
 
   useEffect(() => {
-    setQuantity(0);
+    setQuantity(1);
   }, [item])
 
   const addToCart = (e, item) => setCart(cart.concat(item)) 
 
   const updateQuantity = () => {
-    const increaseQuantity = (e, item, num) => {
-      if(item.quantity !== 0) setQuantity(item.quantity);
-      setQuantity(num+1);
+    const increaseQuantity = (e, item) => {
+      setItem(item);
+      setQuantity(quantity+1);
+      // problem. If it is included, have to click 2x for new num. 
       updateObj(e, item);
+      console.log(quantity)
     };
     
     const decreaseQuantity = (e, item, num) => {
@@ -37,11 +39,8 @@ function Items(props) {
   const updateObj = (e, item) => {
     if(e === undefined) return;
       item.quantity = quantity;
-      setItem(item);
-      console.log(item)
   }
 
-  
   return (
     <div className="items">
             {props.items.map((item) => {

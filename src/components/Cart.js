@@ -25,7 +25,7 @@ function AddToCart(props) {
             <div id='plus-minus-item'>
               <button id='add' 
                       value={item.quantity} 
-                      onClick={(e) => props.updateQuantity().increaseQuantity(e, item, props.quantity)}>+</button>
+                      onClick={(e) => props.updateQuantity().increaseQuantity(e, item)}>+</button>
               <button id='remove' 
                       onClick={(e) => props.updateQuantity().decreaseQuantity(e, item, props.quantity)}>-</button>
             </div>
