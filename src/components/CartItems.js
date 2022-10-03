@@ -16,7 +16,7 @@ export default function CartItems(props) {
             }}></div>
             <h4 className='item-name'>{item.title}</h4>
             <h4 className='price'>${item.price}</h4>
-            <Counter item={item} />
+            <Counter item={item} newTotal={props.newTotal} />
           </div>
   );
 }

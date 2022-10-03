@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Items from './Items';
-import Counter from './Counter'
 import CartItems from './CartItems';
 
 export default function AddToCart(props) {
@@ -15,7 +14,7 @@ export default function AddToCart(props) {
       {props.items.map((item) => {
         return(
           <div key={item.id}>
-          <CartItems item={item} />
+          <CartItems item={item} newTotal = {props.newTotal} />
           </div>
         )
       })}

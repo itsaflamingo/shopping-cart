@@ -7,10 +7,11 @@ function Items(props) {
   const [closeCart, setCloseCart] = useState(true);
   const [cart, setCart] = useState([]);
 
-  const [item, setItem] = useState({price: 0});
   const [total, setTotal] = useState(0);
 
-  const addToCart = (e, item) => setCart(cart.concat(item)) 
+  const addToCart = (item) => setCart(cart.concat(item)) 
+
+  const newTotal = (price) => setTotal(total + price);
 
   return (
     <div className="items">
@@ -21,7 +22,7 @@ function Items(props) {
                   </div>
                 )
             })}
-            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} total={total} />}
+            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} total={total} newTotal={newTotal} />}
     </div>
   );
 }

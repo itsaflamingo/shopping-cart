@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function Counter(props) {
 
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+    
+    useEffect(() => {
+        props.newTotal(props.item.price);
+    }, [quantity])
 
         const increaseQuantity = (num) => setQuantity(num + 1);
         

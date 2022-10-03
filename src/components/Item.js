@@ -13,7 +13,7 @@ export default function Item(props) {
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat'
                           }}>
-                            <button onClick={e => addToCart(e, item)}>Add to Cart</button>
+                            <button onClick={() => addToCart(item)}>Add to Cart</button>
                           </div>
                         <div className='item-info'>
                           <p>{item.title}</p>
