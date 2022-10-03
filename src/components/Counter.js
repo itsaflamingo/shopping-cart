@@ -3,31 +3,32 @@ import React, {useState, useEffect} from 'react';
 export default function Counter(props) {
 
     const [quantity, setQuantity] = useState(1);
-    
+    const {newTotal, item} = props;
+
     useEffect(() => {
-        props.newTotal(props.item.price);
+        newTotal(item.price);
     }, [quantity])
 
-        const increaseQuantity = (num) => setQuantity(num + 1);
+    const increaseQuantity = (num) => setQuantity(num + 1);
         
-        const decreaseQuantity = (num) => {
-          if(num === 0) return;
-          setQuantity(num - 1);
-        };
+    const decreaseQuantity = (num) => {
+      if(num === 0) return;
+      setQuantity(num - 1);
+    };
         
-        const updateObj = (item) => item.quantity = quantity;
+    const updateObj = (item) => item.quantity = quantity;
         
     
     return(
         <div className='counter'>
             <input className='item-counter' 
-                  onChange={() => updateObj(props.item)} 
-                  value={quantity} />
+                onChange={() => updateObj(item)} 
+                value={quantity} />
             <div className='item-quantity'>
               <button id='add' 
-                      onClick={() => increaseQuantity(quantity)}>+</button>
+                onClick={() => increaseQuantity(quantity)}>+</button>
               <button id='remove' 
-                      onClick={() => decreaseQuantity(quantity)}>-</button>
+                onClick={() => decreaseQuantity(quantity)}>-</button>
             </div>
         </div>
     ) 

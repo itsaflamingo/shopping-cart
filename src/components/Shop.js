@@ -2,13 +2,20 @@ import React, {useState, useEffect} from 'react';
 import '../styles/Shop.css';
 import { useNavigate } from 'react-router-dom';
 import Items from './Items';
+import Header from './Header';
 
 function Shop() {
   const [items, setItems] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => setCart(cart.concat(item)); 
 
   useEffect(() => {
     shopItems()
   }, [])
+
+  const newTotal = (price) => setTotal(total + price);
 
   const shopItems = () => {
     fetch('https://fakestoreapi.com/products/')
@@ -22,13 +29,11 @@ function Shop() {
     nav('/')
   }
 
+
   return (
     <div className="shop">
-      <div id='shop-header'>
-        <h2>Shop</h2>
-        <button onClick={navHome}>Home</button>
-      </div>
-      <Items items={items} /> 
+      <Header navHome={navHome} cart={cart} newTotal={newTotal} total={total} />
+      <Items items={items} addToCart={addToCart} /> 
     </div>
   );
 }

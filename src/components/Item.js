@@ -1,24 +1,22 @@
 import React from 'react'
 
 export default function Item(props) {
-    const item = props.item;
-    const addToCart = props.addToCart;
-    const setCloseCart = props.setCloseCart;
+
+    const {item, addToCart} = props;
 
     return(
-        <div className='item'
-                          onClick={() => setCloseCart(false)}>
-                        <div className='image' style={{
-                            backgroundImage: `url(${item.image})`,
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat'
-                          }}>
-                            <button onClick={() => addToCart(item)}>Add to Cart</button>
-                          </div>
-                        <div className='item-info'>
-                          <p>{item.title}</p>
-                          <p>${item.price}</p>
-                        </div>
-                    </div>
+        <div className='item'>
+            <div className='image' style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat'
+              }}>
+                <button onClick={() => addToCart(item)}>Add to Cart</button>
+              </div>
+            <div className='item-info'>
+              <p>{item.title}</p>
+              <p>${item.price}</p>
+            </div>
+        </div>
     )
 }

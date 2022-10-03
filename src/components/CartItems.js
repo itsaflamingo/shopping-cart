@@ -4,7 +4,7 @@ import Counter from './Counter'
 
 export default function CartItems(props) {
 
-    const item = props.item;
+    const {item, newTotal} = props;
 
   return (
           <div className='cart-item'>
@@ -16,7 +16,7 @@ export default function CartItems(props) {
             }}></div>
             <h4 className='item-name'>{item.title}</h4>
             <h4 className='price'>${item.price}</h4>
-            <Counter item={item} newTotal={props.newTotal} />
+            <Counter item={item} newTotal={newTotal} />
           </div>
   );
 }
