@@ -5,48 +5,52 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
   <div
     class="items"
   >
-    <div
-      class="item"
-    >
+    <div>
       <div
-        class="image"
-        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        class="item"
       >
-        <button>
-          Add to Cart
-        </button>
-      </div>
-      <div
-        class="item-info"
-      >
-        <p>
-          name1
-        </p>
-        <p>
-          $
-        </p>
+        <div
+          class="image"
+          style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        >
+          <button>
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="item-info"
+        >
+          <p>
+            name1
+          </p>
+          <p>
+            $
+          </p>
+        </div>
       </div>
     </div>
-    <div
-      class="item"
-    >
+    <div>
       <div
-        class="image"
-        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        class="item"
       >
-        <button>
-          Add to Cart
-        </button>
-      </div>
-      <div
-        class="item-info"
-      >
-        <p>
-          name2
-        </p>
-        <p>
-          $
-        </p>
+        <div
+          class="image"
+          style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        >
+          <button>
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="item-info"
+        >
+          <p>
+            name2
+          </p>
+          <p>
+            $
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -58,48 +62,52 @@ exports[`Shop items Renders items on page 1`] = `
   <div
     class="items"
   >
-    <div
-      class="item"
-    >
+    <div>
       <div
-        class="image"
-        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        class="item"
       >
-        <button>
-          Add to Cart
-        </button>
-      </div>
-      <div
-        class="item-info"
-      >
-        <p>
-          name1
-        </p>
-        <p>
-          $
-        </p>
+        <div
+          class="image"
+          style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        >
+          <button>
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="item-info"
+        >
+          <p>
+            name1
+          </p>
+          <p>
+            $
+          </p>
+        </div>
       </div>
     </div>
-    <div
-      class="item"
-    >
+    <div>
       <div
-        class="image"
-        style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        class="item"
       >
-        <button>
-          Add to Cart
-        </button>
-      </div>
-      <div
-        class="item-info"
-      >
-        <p>
-          name2
-        </p>
-        <p>
-          $
-        </p>
+        <div
+          class="image"
+          style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
+        >
+          <button>
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="item-info"
+        >
+          <p>
+            name2
+          </p>
+          <p>
+            $
+          </p>
+        </div>
       </div>
     </div>
   </div>
