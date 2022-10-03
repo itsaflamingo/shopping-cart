@@ -5,43 +5,11 @@ function Items(props) {
 
   const [closeCart, setCloseCart] = useState(true);
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState(1);
-  const [item, setItem] = useState();
+
+  const [item, setItem] = useState({price: 0});
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
-    setQuantity(1);
-  }, [item])
-
   const addToCart = (e, item) => setCart(cart.concat(item)) 
-
-  const updateQuantity = () => {
-    const increaseQuantity = (e, item) => {
-      setItem(item);
-      setQuantity(quantity+1);
-      // problem. If it is included, have to click 2x for new num. 
-      updateObj(e, item);
-      console.log(quantity)
-    };
-    
-    const decreaseQuantity = (e, item) => {
-      if(item.quantity === 0) return;
-      setQuantity(item.quantity);
-      setQuantity(quantity-1);
-      updateObj(e, item);
-    };
-    
-    return {
-      increaseQuantity,
-      decreaseQuantity,
-    }
-  }
-
-  const updateObj = (e, item) => {
-    if(e === undefined) return;
-      item.quantity = quantity;
-      setTotal(total + item.price);
-  }
 
   return (
     <div className="items">
@@ -64,7 +32,7 @@ function Items(props) {
                     </div>
                 )
             })}
-            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} updateQuantity={updateQuantity} quantity={quantity} updateObj={updateObj} total={total} />}
+            {!closeCart && <Cart items={cart} setCloseCart={setCloseCart} total={total} />}
     </div>
   );
 }
