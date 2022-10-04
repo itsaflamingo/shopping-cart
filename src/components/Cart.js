@@ -8,7 +8,6 @@ export default function AddToCart(props) {
     <div id='cart' role='cart' aria-describedby="modal">
       <div>
         <h3>Shopping Cart</h3>
-        <button>Close</button>
       </div>
       {items.map((item) => {
         return(

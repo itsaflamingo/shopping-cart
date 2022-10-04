@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom';
+import Carousel from './Carousel'
 
 function Homepage() {
   const nav = useNavigate();
@@ -10,8 +11,7 @@ function Homepage() {
 
   return (
     <div className="App">
-          <h2>Homepage</h2>
-          <button onClick={navToShop}>Shop</button>
+          <Carousel navToShop={navToShop} />
     </div>
   );
 }

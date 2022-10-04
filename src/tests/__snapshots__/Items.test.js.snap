@@ -5,7 +5,9 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
   <div
     class="items"
   >
-    <div>
+    <div
+      class="item-container"
+    >
       <div
         class="item"
       >
@@ -13,14 +15,18 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
           class="image"
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
-          <button>
+          <button
+            id="add-to-cart"
+          >
             Add to Cart
           </button>
         </div>
         <div
           class="item-info"
         >
-          <p>
+          <p
+            class="title"
+          >
             name1
           </p>
           <p>
@@ -29,7 +35,9 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="item-container"
+    >
       <div
         class="item"
       >
@@ -37,14 +45,18 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
           class="image"
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
-          <button>
+          <button
+            id="add-to-cart"
+          >
             Add to Cart
           </button>
         </div>
         <div
           class="item-info"
         >
-          <p>
+          <p
+            class="title"
+          >
             name2
           </p>
           <p>
@@ -62,7 +74,9 @@ exports[`Shop items Renders items on page 1`] = `
   <div
     class="items"
   >
-    <div>
+    <div
+      class="item-container"
+    >
       <div
         class="item"
       >
@@ -70,14 +84,18 @@ exports[`Shop items Renders items on page 1`] = `
           class="image"
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
-          <button>
+          <button
+            id="add-to-cart"
+          >
             Add to Cart
           </button>
         </div>
         <div
           class="item-info"
         >
-          <p>
+          <p
+            class="title"
+          >
             name1
           </p>
           <p>
@@ -86,7 +104,9 @@ exports[`Shop items Renders items on page 1`] = `
         </div>
       </div>
     </div>
-    <div>
+    <div
+      class="item-container"
+    >
       <div
         class="item"
       >
@@ -94,14 +114,18 @@ exports[`Shop items Renders items on page 1`] = `
           class="image"
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
-          <button>
+          <button
+            id="add-to-cart"
+          >
             Add to Cart
           </button>
         </div>
         <div
           class="item-info"
         >
-          <p>
+          <p
+            class="title"
+          >
             name2
           </p>
           <p>

@@ -11,10 +11,10 @@ export default function Item(props) {
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
               }}>
-                <button onClick={() => addToCart(item)}>Add to Cart</button>
+                <button id='add-to-cart' onClick={() => addToCart(item)}>Add to Cart</button>
               </div>
             <div className='item-info'>
-              <p>{item.title}</p>
+              <p className='title'>{item.title}</p>
               <p>${item.price}</p>
             </div>
         </div>

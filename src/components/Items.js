@@ -10,7 +10,7 @@ function Items(props) {
     <div className="items">
             {props.items.map((item) => {
                 return (
-                  <div key={item.id}>
+                  <div key={item.id} className='item-container'>
                     <Item item={item} addToCart={addToCart} />
                   </div>
                 )
