@@ -8,15 +8,17 @@ export default function CartItems(props) {
 
   return (
           <div className='cart-item'>
-            <div className='picture' id='cart-picture'
+            <div className='cart-picture'
             style={{
               backgroundImage: `url(${item.image})`,
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat'
             }}></div>
-            <h4 className='item-name'>{item.title}</h4>
-            <h4 className='price'>${item.price}</h4>
-            <Counter item={item} newTotal={newTotal} />
+            <div className='cart-item-info'>
+                <h4 className='item-name'>{item.title}</h4>
+                <h4 className='price'>${item.price}</h4>
+                <Counter item={item} newTotal={newTotal} />
+            </div>
           </div>
   );
 }

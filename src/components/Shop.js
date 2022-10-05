@@ -31,7 +31,7 @@ function Shop() {
 
 
   return (
-    <div className="shop">
+    <div id="shop">
       <Header navHome={navHome} cart={cart} newTotal={newTotal} total={total} />
       <Items items={items} addToCart={addToCart} /> 
     </div>

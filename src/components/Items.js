@@ -7,7 +7,7 @@ function Items(props) {
   const {addToCart} = props;
 
   return (
-    <div className="items">
+    <div id="items">
             {props.items.map((item) => {
                 return (
                   <div key={item.id} className='item-container'>

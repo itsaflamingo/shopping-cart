@@ -25,9 +25,9 @@ export default function Counter(props) {
                 onChange={() => updateObj(item)} 
                 value={quantity} />
             <div className='item-quantity'>
-              <button id='add' 
+              <button className='add' 
                 onClick={() => increaseQuantity(quantity)}>+</button>
-              <button id='remove' 
+              <button className='remove' 
                 onClick={() => decreaseQuantity(quantity)}>-</button>
             </div>
         </div>

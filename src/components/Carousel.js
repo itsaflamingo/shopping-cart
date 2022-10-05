@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import background from '../images/background.jpg'
 import background2 from '../images/background2.jpg'
-import background3 from '../images/background3.jpg'
+import background3 from '../images/background3.webp'
 import background4 from '../images/background4.jpg'
 
 

@@ -6,7 +6,7 @@ export default function AddToCart(props) {
   const {items, newTotal, total} = props;
   return (
     <div id='cart' role='cart' aria-describedby="modal">
-      <div>
+      <div id='cart-header'>
         <h3>Shopping Cart</h3>
       </div>
       {items.map((item) => {
@@ -17,7 +17,7 @@ export default function AddToCart(props) {
         )
       })}
       <div id='total'>Total: ${total}</div>
-
+      <button id='checkout'>Checkout</button>
     </div>
   );
 }
