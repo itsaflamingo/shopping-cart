@@ -3,7 +3,7 @@
 exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
 <DocumentFragment>
   <div
-    class="items"
+    id="items"
   >
     <div
       class="item-container"
@@ -72,7 +72,7 @@ exports[`Shop items Opens cart when "add to cart" button is clicked 1`] = `
 exports[`Shop items Renders items on page 1`] = `
 <div>
   <div
-    class="items"
+    id="items"
   >
     <div
       class="item-container"

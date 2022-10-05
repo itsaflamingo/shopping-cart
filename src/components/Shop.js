@@ -8,17 +8,12 @@ function Shop() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [cart, setCart] = useState([]);
-  const [searchItem, setSearchItem] = useState([]);
 
   const addToCart = (item) => setCart(cart.concat(item)); 
 
   useEffect(() => {
     shopItems()
   }, [])
-
-  useEffect(() => {
-    setItems(searchItem)
-  }, [searchItem])
 
   const newTotal = (price) => {
     if(total === undefined) return;
@@ -29,10 +24,6 @@ function Shop() {
     fetch('https://fakestoreapi.com/products?limit=8')
             .then(res=>res.json())
             .then(json=>setItems(json))
-  }
-
-  const onSearch = () => {
-    //onChange handler for items searched. 
   }
 
   const nav = useNavigate();
