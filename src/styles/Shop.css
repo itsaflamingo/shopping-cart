@@ -76,7 +76,7 @@ body {
 }
 #buttons {
     display: flex;
-    width: 20%;
+    width: 50%;
     justify-content: flex-end;
 }
 /* ITEMS */
@@ -118,6 +118,13 @@ body {
     justify-content: center;
     max-height: 300px;
     max-width: 300px;
+}
+#background {
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .title {
     width: 70%;

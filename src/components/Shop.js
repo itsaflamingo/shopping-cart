@@ -8,6 +8,7 @@ function Shop() {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
   const [cart, setCart] = useState([]);
+  const [searchItem, setSearchItem] = useState([]);
 
   const addToCart = (item) => setCart(cart.concat(item)); 
 
@@ -15,7 +16,14 @@ function Shop() {
     shopItems()
   }, [])
 
-  const newTotal = (price) => setTotal(total + price);
+  useEffect(() => {
+    setItems(searchItem)
+  }, [searchItem])
+
+  const newTotal = (price) => {
+    if(total === undefined) return;
+    setTotal(((total + price)* 100)/100);
+  };
 
   const shopItems = () => {
     fetch('https://fakestoreapi.com/products?limit=8')
@@ -23,12 +31,15 @@ function Shop() {
             .then(json=>setItems(json))
   }
 
+  const onSearch = () => {
+    //onChange handler for items searched. 
+  }
+
   const nav = useNavigate();
 
   const navHome = () => {
     nav('/')
   }
-
 
   return (
     <div id="shop">
