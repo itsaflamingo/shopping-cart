@@ -19,7 +19,8 @@ export default function Header(props) {
                 backgroundImage: `url(${search})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
-              }}></div>
+              }}
+              onClick={() => setOpenSearch(!openSearch)}></div>
         <div id='to-home' onClick={navHome} style={{
                 backgroundImage: `url(${home})`,
                 backgroundSize: 'contain',
@@ -29,7 +30,8 @@ export default function Header(props) {
                 backgroundImage: `url(${shoppingCart})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
-              }} onClick={() => setCloseCart(!closeCart)}>
+              }} 
+              onClick={() => setCloseCart(!closeCart)}>
                 <div id='cart-quantity'>{cart.length}</div>
             </div>
         </div>
