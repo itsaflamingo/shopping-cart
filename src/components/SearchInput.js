@@ -3,7 +3,7 @@ import React from 'react'
 export default function Search(props) {
 
     return(
-        <div>
+        <div id='search-input'>
             <input></input>
         </div>
     )

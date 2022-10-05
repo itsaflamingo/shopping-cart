@@ -7,13 +7,13 @@ export default function Search(props) {
     const {setOpenSearch, openSearch} = props;
 
     return(
-        <div>
+        <div id='search-container'>
             <div id='search' style={{
                 backgroundImage: `url(${search})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
               }}
-            onClick={() => setOpenSearch(!setOpenSearch)}></div>
+              onClick={() => setOpenSearch(!openSearch)}></div>
             {!openSearch && <SearchInput />}
         </div>
     )

@@ -15,7 +15,7 @@ export default function Header(props) {
         <h2>Shop</h2>
         <div id='buttons'>
         <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
-        <div id='to-home' onClick={navHome} style={{
+        <div id='home-icon' onClick={navHome} style={{
                 backgroundImage: `url(${home})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'

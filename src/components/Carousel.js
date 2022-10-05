@@ -19,13 +19,18 @@ export default function Carousel(props) {
 
         return () => clearTimeout(timer);
     }, [index]);
+
+    const backgroundStyle = () => {
+        return {
+                Animation: 'fadeIn 2s',
+                backgroundImage: `url(${backgrounds[index]})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+        }
+    }
     
     return(
-        <div id='background' style={{
-            backgroundImage: `url(${backgrounds[index]})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}>
+        <div id='background' style={backgroundStyle()}>
             <div id='home-header'>
               <h2>Fake Shop</h2>
             </div>
