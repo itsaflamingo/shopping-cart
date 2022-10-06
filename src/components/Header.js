@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import shoppingCart from '../images/shopping-cart.png'
 import Cart from './Cart'
 import home from '../images/home.png'
@@ -15,12 +15,12 @@ export default function Header(props) {
         <h2>Shop</h2>
         <div id='buttons'>
         <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
-        <div id='home-icon' onClick={navHome} style={{
+        <div id='home-icon' data-testid='home-icon' onClick={navHome} style={{
                 backgroundImage: `url(${home})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
               }}></div>
-        <div id='cart-icon' style={{
+        <div id='cart-icon' data-testid='cart-icon' style={{
                 backgroundImage: `url(${shoppingCart})`,
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'

@@ -17,11 +17,10 @@ export default function Counter(props) {
     };
         
     const updateObj = (item) => item.quantity = quantity;
-        
     
     return(
         <div className='counter'>
-            <input className='item-counter' 
+            <input className='item-counter' type='input'
                 onChange={() => updateObj(item)} 
                 value={quantity} />
             <div className='item-quantity'>

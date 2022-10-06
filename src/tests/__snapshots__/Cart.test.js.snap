@@ -1,58 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cart component Renders items on page 1`] = `
+exports[`Cart component Renders cart on page 1`] = `
 <div>
   <div
     aria-describedby="modal"
     id="cart"
     role="cart"
   >
-    <div>
+    <div
+      id="cart-header"
+    >
       <h3>
         Shopping Cart
       </h3>
-      <button>
-        Close
-      </button>
     </div>
     <div>
       <div
         class="cart-item"
       >
         <div
-          class="picture"
-          id="cart-picture"
+          class="cart-picture"
           style="background-image: url(url1); background-size: contain; background-repeat: no-repeat;"
         />
-        <h4
-          class="item-name"
-        />
-        <h4
-          class="price"
-        >
-          $
-          price1
-        </h4>
         <div
-          class="counter"
+          class="cart-item-info"
         >
-          <input
-            class="item-counter"
-            value="0"
-          />
-          <div
-            class="item-quantity"
+          <h4
+            class="item-name"
           >
-            <button
-              id="add"
+            name1
+          </h4>
+          <h4
+            class="price"
+          >
+            $
+            10
+          </h4>
+          <div
+            class="counter"
+          >
+            <input
+              class="item-counter"
+              type="input"
+              value="1"
+            />
+            <div
+              class="item-quantity"
             >
-              +
-            </button>
-            <button
-              id="remove"
-            >
-              -
-            </button>
+              <button
+                class="add"
+              >
+                +
+              </button>
+              <button
+                class="remove"
+              >
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -62,39 +67,45 @@ exports[`Cart component Renders items on page 1`] = `
         class="cart-item"
       >
         <div
-          class="picture"
-          id="cart-picture"
+          class="cart-picture"
           style="background-image: url(url2); background-size: contain; background-repeat: no-repeat;"
         />
-        <h4
-          class="item-name"
-        />
-        <h4
-          class="price"
-        >
-          $
-          price2
-        </h4>
         <div
-          class="counter"
+          class="cart-item-info"
         >
-          <input
-            class="item-counter"
-            value="0"
-          />
-          <div
-            class="item-quantity"
+          <h4
+            class="item-name"
           >
-            <button
-              id="add"
+            name2
+          </h4>
+          <h4
+            class="price"
+          >
+            $
+            10
+          </h4>
+          <div
+            class="counter"
+          >
+            <input
+              class="item-counter"
+              type="input"
+              value="1"
+            />
+            <div
+              class="item-quantity"
             >
-              +
-            </button>
-            <button
-              id="remove"
-            >
-              -
-            </button>
+              <button
+                class="add"
+              >
+                +
+              </button>
+              <button
+                class="remove"
+              >
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -104,48 +115,61 @@ exports[`Cart component Renders items on page 1`] = `
         class="cart-item"
       >
         <div
-          class="picture"
-          id="cart-picture"
+          class="cart-picture"
           style="background-image: url(url3); background-size: contain; background-repeat: no-repeat;"
         />
-        <h4
-          class="item-name"
-        />
-        <h4
-          class="price"
-        >
-          $
-          price3
-        </h4>
         <div
-          class="counter"
+          class="cart-item-info"
         >
-          <input
-            class="item-counter"
-            value="0"
-          />
-          <div
-            class="item-quantity"
+          <h4
+            class="item-name"
           >
-            <button
-              id="add"
+            name3
+          </h4>
+          <h4
+            class="price"
+          >
+            $
+            10
+          </h4>
+          <div
+            class="counter"
+          >
+            <input
+              class="item-counter"
+              type="input"
+              value="1"
+            />
+            <div
+              class="item-quantity"
             >
-              +
-            </button>
-            <button
-              id="remove"
-            >
-              -
-            </button>
+              <button
+                class="add"
+              >
+                +
+              </button>
+              <button
+                class="remove"
+              >
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
+      aria-label="total"
       id="total"
     >
       Total: $
+      0
     </div>
+    <button
+      id="checkout"
+    >
+      Checkout
+    </button>
   </div>
 </div>
 `;

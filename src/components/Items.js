@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import Cart from './Cart'
+import React from 'react';
 import Item from './Item';
 
 function Items(props) {

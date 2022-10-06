@@ -8,24 +8,18 @@ import { act } from "react-dom/test-utils";
 
 // shop renders
 describe('Shop component', () => {
-    it('renders correct heading', () => {
-        render(
+    it('when item added to cart, cart info is updated', () => {
+        const {container} = render(
             <Router>
                 <Shop />
-            </Router>)
-        expect(screen.getByRole('heading').textContent).toMatch(/Shop/i)
-    })
-    it('page switches to home on button click', () => {
-        render(
-            <Router>
-                <Shop />
-            </Router>)
+            </Router>) 
 
-        const button = screen.getByRole('button', {name: 'Home'});
+        const button = screen.getAllByRole('button', {name: 'Add to Cart'});
         act(() => {
-            button.dispatchEvent(new MouseEvent('click', {bubbles: true}))
-        });
-        expect(window.location.pathname).toEqual('/');
+            userEvent.click(button[0]);
+        })
+        const name = screen.getAllByText('name1');
+        expect(name[1].innerHTML).toBe('name1');
     })
 
 })

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import CartItems from './CartItems';
 
 export default function AddToCart(props) {
@@ -16,7 +16,7 @@ export default function AddToCart(props) {
           </div>
         )
       })}
-      <div id='total'>Total: ${total}</div>
+      <div id='total' aria-label='total'>Total: ${total}</div>
       <button id='checkout'>Checkout</button>
     </div>
   );

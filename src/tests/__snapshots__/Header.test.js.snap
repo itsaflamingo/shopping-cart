@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Goes to home page when home icon clicked 1`] = `
+<DocumentFragment>
+  <div
+    id="shop-header"
+  >
+    <h2>
+      Shop
+    </h2>
+    <div
+      id="buttons"
+    >
+      <div
+        id="search-container"
+      >
+        <div
+          id="search"
+          style="background-image: url(search.png); background-size: contain; background-repeat: no-repeat;"
+        />
+      </div>
+      <div
+        data-testid="home-icon"
+        id="home-icon"
+        style="background-image: url(home.png); background-size: contain; background-repeat: no-repeat;"
+      />
+      <div
+        data-testid="cart-icon"
+        id="cart-icon"
+        style="background-image: url(shopping-cart.png); background-size: contain; background-repeat: no-repeat;"
+      >
+        <div
+          id="cart-quantity"
+        >
+          1
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header component Opens to cart when cart icon clicked 1`] = `
+<DocumentFragment>
+  <div
+    id="shop-header"
+  >
+    <h2>
+      Shop
+    </h2>
+    <div
+      id="buttons"
+    >
+      <div
+        id="search-container"
+      >
+        <div
+          id="search"
+          style="background-image: url(search.png); background-size: contain; background-repeat: no-repeat;"
+        />
+      </div>
+      <div
+        data-testid="home-icon"
+        id="home-icon"
+        style="background-image: url(home.png); background-size: contain; background-repeat: no-repeat;"
+      />
+      <div
+        data-testid="cart-icon"
+        id="cart-icon"
+        style="background-image: url(shopping-cart.png); background-size: contain; background-repeat: no-repeat;"
+      >
+        <div
+          id="cart-quantity"
+        >
+          1
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

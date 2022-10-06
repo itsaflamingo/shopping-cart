@@ -7,11 +7,11 @@ import { act } from "react-dom/test-utils";
 
 describe('Homepage component', () => {
     it('renders correct heading', () => {
-        const {getByRole} = render(
+        render(
         <Router>
             <Homepage />
         </Router>)
-        expect(screen.getByRole('heading').textContent).toMatch(/Homepage/i)
+        expect(screen.getByRole('heading').textContent).toMatch(/Fake Shop/i)
     })
 
     it('page switches to shop on button click', () => {

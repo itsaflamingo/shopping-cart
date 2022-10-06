@@ -97,14 +97,16 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 3%;
+    margin: 3% 0;
 }
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 25rem;
     gap: 3rem;
+    border: 1px solid grey;
 }
 .item-info {
     display: none;
