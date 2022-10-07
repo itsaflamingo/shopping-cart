@@ -54,10 +54,14 @@ describe('Cart component', () => {
         const input = screen.getByLabelText('total');
         expect(input.innerHTML).toBe('Total: $0');
     })
-    it('Cart total increases by correct amount when + is clicked', () => {
+    it('Cart total increases by correct amount when number of cart items increases', () => {
+        let thisTotal = 0;
+        items.forEach(item => {
+            thisTotal = thisTotal + parseInt(item.price);
+        })
         render(
             <Router>
-                <Header navHome={navHome} cart={items} newTotal={newTotal} total={total} />
+                <Header navHome={navHome} cart={items} newTotal={newTotal} total={thisTotal} />
                 <CartItems item={item} newTotal={newTotal} />
             </Router>) 
 
@@ -65,14 +69,9 @@ describe('Cart component', () => {
         act(() => {
             userEvent.click(button);
         })
-        const sub = screen.getAllByRole('button', {name: '+'})
-        
-        act(() => {
-            userEvent.click(sub[0]);
-        })
         
         const input = screen.getByLabelText('total');
-        expect(input.innerHTML).toBe('Total: $10');
+        expect(input.innerHTML).toBe(`Total: $30`);
     })
     test.todo('Cart total decreases by correct amount when - is clicked')
     test.todo('Cart total increases by correct amount when item is added to cart')

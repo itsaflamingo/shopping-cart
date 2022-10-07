@@ -9,15 +9,22 @@ function Shop() {
   const [total, setTotal] = useState(0);
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item) => setCart(cart.concat(item)); 
+  const addToCart = (item) => {
+    setCart(cart.concat(item))
+    setTotal(((total + item.price)* 100)/100);
+  }; 
 
   useEffect(() => {
     shopItems()
   }, [])
 
-  const newTotal = (price) => {
+  const newTotal = (price, isAdd) => {
     if(total === undefined) return;
-    setTotal(((total + price)* 100)/100);
+    if(isAdd === true) {
+      return setTotal(((total + price)* 100)/100)
+    };
+
+    return setTotal(((total - price)* 100)/100);
   };
 
   const shopItems = () => {

@@ -5,15 +5,15 @@ export default function Counter(props) {
     const [quantity, setQuantity] = useState(1);
     const {newTotal, item} = props;
 
-    useEffect(() => {
-        newTotal(item.price);
-    }, [quantity])
-
-    const increaseQuantity = (num) => setQuantity(num + 1);
+    const increaseQuantity = (num) => {
+      setQuantity(num + 1)
+      newTotal(item.price, true);
+    };
         
     const decreaseQuantity = (num) => {
-      if(num === 0) return;
+      if(num <= 0) return;
       setQuantity(num - 1);
+      newTotal(item.price, false);
     };
         
     const updateObj = (item) => item.quantity = quantity;
