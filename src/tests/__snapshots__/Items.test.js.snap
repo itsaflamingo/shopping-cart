@@ -9,6 +9,7 @@ exports[`Shop items Renders items on page 1`] = `
       class="item-container"
     >
       <div
+        aria-label="item"
         class="item"
       >
         <div
@@ -16,7 +17,6 @@ exports[`Shop items Renders items on page 1`] = `
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
           <button
-            aria-label="add-to-cart"
             id="add-to-cart"
           >
             Add to Cart
@@ -40,6 +40,7 @@ exports[`Shop items Renders items on page 1`] = `
       class="item-container"
     >
       <div
+        aria-label="item"
         class="item"
       >
         <div
@@ -47,7 +48,6 @@ exports[`Shop items Renders items on page 1`] = `
           style="background-image: url(undefined); background-size: contain; background-repeat: no-repeat;"
         >
           <button
-            aria-label="add-to-cart"
             id="add-to-cart"
           >
             Add to Cart

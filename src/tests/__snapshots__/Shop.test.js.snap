@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop component Renders correctly 1`] = `
+<div>
+  <div
+    id="shop"
+  >
+    <div
+      id="shop-header"
+    >
+      <h2>
+        Shop
+      </h2>
+      <div
+        id="buttons"
+      >
+        <div
+          id="search-container"
+        >
+          <div
+            id="search"
+            style="background-image: url(search.png); background-size: contain; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-testid="home-icon"
+          id="home-icon"
+          style="background-image: url(home.png); background-size: contain; background-repeat: no-repeat;"
+        />
+        <div
+          data-testid="cart-icon"
+          id="cart-icon"
+          style="background-image: url(shopping-cart.png); background-size: contain; background-repeat: no-repeat;"
+        >
+          <div
+            id="cart-quantity"
+          >
+            0
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="items"
+    />
+  </div>
+</div>
+`;

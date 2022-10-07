@@ -22,18 +22,9 @@ function Shop() {
     setItems(filterProducts(await shopItems()));
   } 
 
-  const newTotal = (price, isAdd) => {
-    if(total === undefined) return;
-    if(isAdd === true) {
-      return setTotal(((total + price)* 100)/100)
-    };
-
-    return setTotal(((total - price)* 100)/100);
-  };
-
   const shopItems = async () => {
     const response = await fetch(`https://fakestoreapi.com/products`)
-    let data = await response.json()
+    const data = await response.json()
     return data;
   }
 
@@ -42,6 +33,15 @@ function Shop() {
       product.category === `women's clothing` || 
       product.category === `men's clothing`);
   }
+
+  const newTotal = (price, isAdd) => {
+    if(total === undefined) return;
+    if(isAdd === true) {
+      return setTotal(((total + price)* 100)/100)
+    };
+
+    return setTotal((total - price).toFixed(2));
+  };
 
   const nav = useNavigate();
 

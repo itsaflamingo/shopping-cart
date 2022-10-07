@@ -79,5 +79,3 @@ describe('Cart component', () => {
     test.todo('when new item is added, total price is changed')
     test.todo('total price calculation is correct')
 })
-// add one button works
-// checkout button works 

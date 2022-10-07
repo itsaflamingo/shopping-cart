@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage component Renders correctly 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      id="background"
+      style="background-image: url(background.jpg); background-size: cover; background-repeat: no-repeat;"
+    >
+      <div
+        id="home-header"
+      >
+        <h2>
+          Fake Shop
+        </h2>
+      </div>
+      <button
+        id="visit-shop"
+      >
+        Shop
+      </button>
+    </div>
+  </div>
+</div>
+`;

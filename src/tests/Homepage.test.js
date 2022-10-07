@@ -2,23 +2,31 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";  // optional
 import Homepage from '../components/Homepage'
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import { act } from "react-dom/test-utils";
 
 describe('Homepage component', () => {
+    it('Renders correctly', () => {
+        const {container} = render(
+            <BrowserRouter>
+                <Homepage />
+            </BrowserRouter>
+        )
+        expect(container).toMatchSnapshot()
+    })
     it('renders correct heading', () => {
         render(
-        <Router>
+        <BrowserRouter>
             <Homepage />
-        </Router>)
+        </BrowserRouter>)
         expect(screen.getByRole('heading').textContent).toMatch(/Fake Shop/i)
     })
 
     it('page switches to shop on button click', () => {
         render(
-            <Router>
+            <BrowserRouter>
                 <Homepage />
-            </Router>)
+            </BrowserRouter>)
 
         const button = screen.getByRole('button', {name: 'Shop'});
         act(() => {
