@@ -15,8 +15,12 @@ function Shop() {
   }; 
 
   useEffect(() => {
-    shopItems()
+    loadShop();
   }, [])
+
+  const loadShop = async () => {
+    setItems(filterProducts(await shopItems()));
+  } 
 
   const newTotal = (price, isAdd) => {
     if(total === undefined) return;
@@ -27,10 +31,16 @@ function Shop() {
     return setTotal(((total - price)* 100)/100);
   };
 
-  const shopItems = () => {
-    fetch('https://fakestoreapi.com/products?limit=8')
-            .then(res=>res.json())
-            .then(json=>setItems(json))
+  const shopItems = async () => {
+    const response = await fetch(`https://fakestoreapi.com/products`)
+    let data = await response.json()
+    return data;
+  }
+
+  const filterProducts = (products) => {
+    return products.filter(product => 
+      product.category === `women's clothing` || 
+      product.category === `men's clothing`);
   }
 
   const nav = useNavigate();
