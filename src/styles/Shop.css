@@ -143,6 +143,7 @@ body {
 }
 /* CART */
 #cart {
+    min-width: 255px;
     width: 20%;
     border: 1px solid black;
     position: absolute;

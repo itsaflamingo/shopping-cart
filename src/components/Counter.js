@@ -16,12 +16,12 @@ export default function Counter(props) {
       newTotal(item.price, false);
     };
         
-    const updateObj = (item) => item.quantity = quantity;
+    const updateQuantity = (item) => setQuantity(item);
     
     return(
         <div className='counter'>
             <input className='item-counter' type='input'
-                onChange={() => updateObj(item)} 
+                onChange={() => updateQuantity(item)} 
                 value={quantity} />
             <div className='item-quantity'>
               <button className='add' 
