@@ -42,7 +42,7 @@ exports[`Cart component Renders cart on page 1`] = `
             <input
               class="item-counter"
               type="input"
-              value=""
+              value="1"
             />
             <div
               class="item-quantity"
@@ -90,7 +90,7 @@ exports[`Cart component Renders cart on page 1`] = `
             <input
               class="item-counter"
               type="input"
-              value=""
+              value="1"
             />
             <div
               class="item-quantity"
@@ -138,7 +138,7 @@ exports[`Cart component Renders cart on page 1`] = `
             <input
               class="item-counter"
               type="input"
-              value=""
+              value="1"
             />
             <div
               class="item-quantity"

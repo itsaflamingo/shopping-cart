@@ -38,10 +38,9 @@ function Shop() {
   const newTotal = (price, isAdd) => {
     if(total === undefined) return setTotal(parseInt(0));
     if(isAdd === true) {
-      return setTotal(((total + price)* 100)/100)
+      return setTotal(((total + price)* 100)/100);
     };
-    setTotal(parseFloat((total - price).toFixed(2)));
-    return
+    return setTotal(parseFloat((total - price).toFixed(2)));
   };
 
   const nav = useNavigate();

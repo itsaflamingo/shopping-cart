@@ -13,14 +13,14 @@ export default function Counter(props) {
       updateItem(item)
     }, [quantity])
 
-    const increaseQuantity = (num) => {
-      setQuantity(num + 1)
+    const increaseQuantity = () => {
+      setQuantity(quantity + 1)
       newTotal(parseFloat(item.price), true);
     };
         
-    const decreaseQuantity = (num) => {
-      if(num <= 0) return;
-      setQuantity(num - 1);
+    const decreaseQuantity = () => {
+      if(quantity <= 0) return;
+      setQuantity(quantity - 1);
       newTotal(parseFloat(item.price), false);
     };
         
@@ -34,9 +34,9 @@ export default function Counter(props) {
                 value={quantity} />
             <div className='item-quantity'>
               <button className='add' 
-                onClick={() => increaseQuantity(quantity)}>+</button>
+                onClick={() => increaseQuantity()}>+</button>
               <button className='remove' 
-                onClick={() => decreaseQuantity(quantity)}>-</button>
+                onClick={() => decreaseQuantity()}>-</button>
             </div>
         </div>
     ) 

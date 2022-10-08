@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";  // optional
 import {BrowserRouter as Router} from 'react-router-dom';
-import { act } from "react-dom/test-utils";
 import userEvent from "@testing-library/user-event";
 import CartItems from '../components/CartItems'
 import Counter from '../components/Counter'
@@ -39,9 +38,8 @@ describe('CartItems component', () => {
             </Router>)
 
         const button = screen.getByTestId('cart-icon');
-        act(() => {
-            userEvent.click(button);
-        })
+
+        userEvent.click(button);
 
         const name = screen.getByText('name1')
         const name2 = screen.getByText('name2')
@@ -60,9 +58,9 @@ describe('CartItems component', () => {
                 <Counter item={counterItem} newTotal={newTotal} />
             </Router>)
         const button = screen.getByTestId('cart-icon');
-        act(() => {
-            userEvent.click(button);
-        })
+        
+        userEvent.click(button);
+        
         const input = screen.getAllByDisplayValue('1');
         expect(input[0]).toBeInTheDocument();
     })
@@ -74,17 +72,13 @@ describe('CartItems component', () => {
             </Router>)
 
         const button = screen.getByTestId('cart-icon');
-        act(() => {
-            userEvent.click(button);
-        })
+            
+        userEvent.click(button);
+        
         const add = screen.getAllByRole('button', {name: '+'})
 
-        act(() => {
-            userEvent.click(add[0]);
-        })
-        act(() => {
-            userEvent.click(add[0]);
-        })
+        userEvent.click(add[0]);
+        userEvent.click(add[0]);
 
         const input = screen.getAllByDisplayValue('3');
         expect(input[0]).toBeInTheDocument();
@@ -97,14 +91,14 @@ describe('CartItems component', () => {
             </Router>)
 
         const button = screen.getByTestId('cart-icon');
-        act(() => {
-            userEvent.click(button);
-        })
+        
+        userEvent.click(button);
+        
         const sub = screen.getAllByRole('button', {name: '-'})
 
-        act(() => {
-            userEvent.click(sub[0]);
-        })
+        userEvent.click(sub[0]);
+        userEvent.click(sub[0]);
+        userEvent.click(sub[0]);
 
         const input = screen.getAllByDisplayValue('0');
         expect(input[0]).toBeInTheDocument();
@@ -117,17 +111,13 @@ describe('CartItems component', () => {
             </Router>)
 
         const button = screen.getByTestId('cart-icon');
-        act(() => {
-            userEvent.click(button);
-        })
+    
+        userEvent.click(button);
+        
         const sub = screen.getAllByRole('button', {name: '-'})
 
-        act(() => {
-            userEvent.click(sub[0]);
-        })
-        act(() => {
-            userEvent.click(sub[0]);
-        })
+        userEvent.click(sub[0]);
+        userEvent.click(sub[0]);
 
         const notInput = screen.queryByDisplayValue('-1');
         const input = screen.getAllByDisplayValue('0');
