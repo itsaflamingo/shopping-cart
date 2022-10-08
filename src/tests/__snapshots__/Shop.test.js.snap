@@ -9,7 +9,7 @@ exports[`Shop component Renders correctly 1`] = `
       id="shop-header"
     >
       <h2>
-        Shop
+        Fake Shop
       </h2>
       <div
         id="buttons"

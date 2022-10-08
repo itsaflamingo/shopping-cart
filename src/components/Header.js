@@ -12,7 +12,7 @@ export default function Header(props) {
 
   return (
       <div id='shop-header'>
-        <h2>Shop</h2>
+        <h2>Fake Shop</h2>
         <div id='buttons'>
         <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
         <div id='home-icon' data-testid='home-icon' onClick={navHome} style={{

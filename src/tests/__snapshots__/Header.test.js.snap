@@ -6,7 +6,7 @@ exports[`Header component Goes to home page when home icon clicked 1`] = `
     id="shop-header"
   >
     <h2>
-      Shop
+      Fake Shop
     </h2>
     <div
       id="buttons"
@@ -46,7 +46,7 @@ exports[`Header component Opens to cart when cart icon clicked 1`] = `
     id="shop-header"
   >
     <h2>
-      Shop
+      Fake Shop
     </h2>
     <div
       id="buttons"
