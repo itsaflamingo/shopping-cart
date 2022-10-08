@@ -10,8 +10,18 @@ function Shop() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    setCart(cart.concat(item))
-    setTotal(((total + parseFloat(item.price))* 100)/100);
+    let isDouble = false;
+    cart.forEach((thisItem) => {
+      if(thisItem.id === item.id) {
+        isDouble = true;
+        item.quantity = item.quantity + 1
+        return;
+      }
+    })
+    if(isDouble === false) {
+      setCart(cart.concat(item))
+      setTotal(((total + parseFloat(item.price))* 100)/100);
+    }
   }; 
 
   useEffect(() => {

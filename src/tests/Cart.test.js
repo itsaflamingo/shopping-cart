@@ -77,8 +77,8 @@ describe('Cart component', () => {
         expect(input.innerHTML).toBe(`Total: $30`);
     })
     it('Cart total decreases by correct amount when - is clicked', () => {
-        let thisTotal = 0;
-        thisTotal = thisTotal + parseInt(item.price * item.quantity);
+        let thisTotal = 20;
+        thisTotal = thisTotal - parseInt(item.price * (item.quantity + 1));
 
         render(
             <Router>
@@ -98,7 +98,7 @@ describe('Cart component', () => {
     })
     it('Cart total increases by correct amount when + is clicked', () => {
         let thisTotal = 0;
-        thisTotal = thisTotal + parseInt(item.price * item.quantity);
+        thisTotal = thisTotal + parseInt(item.price * (item.quantity + 1));
         
         render(
             <Router>
@@ -116,8 +116,4 @@ describe('Cart component', () => {
         const input = screen.getByLabelText('total');
         expect(input.innerHTML).toBe(`Total: $20`);
     })
-    test.todo('Cart total increases by correct amount when item is added to cart')
-    test.todo('when item quantity is changed, total price is changed')
-    test.todo('when new item is added, total price is changed')
-    test.todo('total price calculation is correct')
 })
