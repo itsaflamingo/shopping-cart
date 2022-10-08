@@ -6,7 +6,7 @@ Live site URL: https://itsaflamingo.github.io/shopping-cart/
 Link to assignment: https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart
 
 ![My Image](./src/images/README1.png)
-![My Image](./src/imgages/README2.png)
+![My Image](./src/images/README2.png)
 
 
 
