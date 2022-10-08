@@ -11,7 +11,7 @@ function Shop() {
 
   const addToCart = (item) => {
     setCart(cart.concat(item))
-    setTotal(((total + item.price)* 100)/100);
+    setTotal(((total + parseFloat(item.price))* 100)/100);
   }; 
 
   useEffect(() => {
@@ -25,6 +25,7 @@ function Shop() {
   const shopItems = async () => {
     const response = await fetch(`https://fakestoreapi.com/products`)
     const data = await response.json()
+    data.map((item) =>  item.quantity = 1)
     return data;
   }
 
@@ -35,12 +36,12 @@ function Shop() {
   }
 
   const newTotal = (price, isAdd) => {
-    if(total === undefined) return;
+    if(total === undefined) return setTotal(parseInt(0));
     if(isAdd === true) {
       return setTotal(((total + price)* 100)/100)
     };
-
-    return setTotal((total - price).toFixed(2));
+    setTotal(parseFloat((total - price).toFixed(2)));
+    return
   };
 
   const nav = useNavigate();

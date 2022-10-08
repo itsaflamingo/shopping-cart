@@ -13,12 +13,14 @@ describe('CartItems component', () => {
             image: 'url1',
             title: 'name1',
             price: 'price1',
-            id: 1   
+            id: 1,
+            quantity: 1   
         }, {
             image: 'url2',
             title: 'name2',
             price: 'price2',
-            id: 2   
+            id: 2,
+            quantity: 1      
         }]
     const counterItem = [{
         image: 'url1',

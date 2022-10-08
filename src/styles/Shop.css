@@ -176,6 +176,10 @@ body {
 }
 #cart-header {
     border-bottom: 1px solid grey;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 #checkout {
     justify-self: center;

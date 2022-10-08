@@ -2,26 +2,35 @@ import React, {useState, useEffect} from 'react';
 
 export default function Counter(props) {
 
-    const [quantity, setQuantity] = useState(1);
     const {newTotal, item} = props;
+    const [quantity, setQuantity] = useState(item.quantity);
+
+    useEffect(() => {
+      setQuantity(item.quantity)
+    }, [])
+
+    useEffect(() => {
+      updateItem(item)
+    }, [quantity])
 
     const increaseQuantity = (num) => {
       setQuantity(num + 1)
-      newTotal(item.price, true);
+      newTotal(parseFloat(item.price), true);
     };
         
     const decreaseQuantity = (num) => {
       if(num <= 0) return;
       setQuantity(num - 1);
-      newTotal(item.price, false);
+      newTotal(parseFloat(item.price), false);
     };
         
-    const updateQuantity = (item) => setQuantity(item);
+    const updateQuantity = (e) => setQuantity(e.target.value);
+    const updateItem = (item) => item.quantity = quantity;
     
     return(
         <div className='counter'>
             <input className='item-counter' type='input'
-                onChange={() => updateQuantity(item)} 
+                onChange={(e) => updateQuantity(e)} 
                 value={quantity} />
             <div className='item-quantity'>
               <button className='add' 
