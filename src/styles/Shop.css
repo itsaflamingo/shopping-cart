@@ -18,8 +18,11 @@ body {
 /* HOMEPAGE */
 #home-header {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     color: rgb(220, 220, 222);
+    border-bottom: 1px solid white;
 }
 #background {
     width: 100%;
@@ -41,6 +44,14 @@ body {
     border: 2px solid rgba(146, 164, 164, 0.781);
     background-color: rgba(146, 164, 164, 0.781);
     color: black;
+}
+#menu {
+    display: flex;
+    position: relative;
+    gap: 90px;
+}
+.sub-menu {
+    position: absolute;
 }
 /* SHOP HEADER */
 #shop-header {
@@ -129,9 +140,6 @@ body {
     justify-content: center;
     max-height: 300px;
     max-width: 300px;
-}
-#background {
-    animation: fadeIn 5s infinite;
 }
 @keyframes fadeIn {
     0% {opacity: 0;}
