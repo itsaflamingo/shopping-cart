@@ -8,12 +8,12 @@ export default function Menu() {
         subMenus: [],
         categoryName: []
     };
-    
-    const [isCategoryClicked, setIsCategoryClicked] = useState(false);
+
+    const [isCategoryHovered, setIsCategoryHovered] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(noCategory);
 
     useEffect(() => {
-        setIsCategoryClicked(true);
+        setIsCategoryHovered(true);
     }, [selectedCategory]);
 
     return (
@@ -21,13 +21,14 @@ export default function Menu() {
             {categories.map((category) => {
                 return (
                     <div className="category" key={category.id}>
-                        <button className='open-category' onMouseOver={() => setSelectedCategory(category)} onMouseLeave={() => setSelectedCategory(noCategory)}>
+                        <button className='open-category' 
+                        onMouseOver={() => setSelectedCategory(category)}>
                             <h3>{category.categoryName}</h3>
                         </button>
                     </div>
                 )
             })}
-            {isCategoryClicked && <SubMenus subMenus={selectedCategory.subMenus} categoryName={selectedCategory.categoryName} isClicked={isCategoryClicked} />}
+            {isCategoryHovered && <SubMenus subMenus={selectedCategory.subMenus} id={selectedCategory.id} isHovered={isCategoryHovered} category={selectedCategory} setCategory={setSelectedCategory} noCategory={noCategory} />}
         </div>
     )
 }
