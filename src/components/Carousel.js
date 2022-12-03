@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import background from '../images/background.jpg'
 import Menu from './Menu'
 

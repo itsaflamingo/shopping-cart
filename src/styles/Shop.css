@@ -52,6 +52,7 @@ body {
 }
 .sub-menu {
     position: absolute;
+    display: flex;
 }
 /* SHOP HEADER */
 #shop-header {

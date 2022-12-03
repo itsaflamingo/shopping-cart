@@ -1,22 +1,33 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import categories from "./MenuFactory"
 import SubMenus from "./SubMenus"
 
 export default function Menu() {
-    const [isCategoryClicked, setIsCategoryClicked] = useState(false);
+
+    const noCategory = { 
+        subMenus: [],
+        categoryName: []
+    };
     
+    const [isCategoryClicked, setIsCategoryClicked] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState(noCategory);
+
+    useEffect(() => {
+        setIsCategoryClicked(true);
+    }, [selectedCategory]);
+
     return (
         <div id='menu'>
             {categories.map((category) => {
                 return (
                     <div className="category" key={category.id}>
-                        <button className='open-category' onMouseOver={() => setIsCategoryClicked(!isCategoryClicked)}>
+                        <button className='open-category' onMouseOver={() => setSelectedCategory(category)} onMouseLeave={() => setSelectedCategory(noCategory)}>
                             <h3>{category.categoryName}</h3>
                         </button>
-                        {isCategoryClicked && <SubMenus subMenus={category.subMenus} />}
                     </div>
                 )
             })}
+            {isCategoryClicked && <SubMenus subMenus={selectedCategory.subMenus} categoryName={selectedCategory.categoryName} isClicked={isCategoryClicked} />}
         </div>
     )
 }
