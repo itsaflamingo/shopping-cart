@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import shoppingCart from '../images/shopping-cart.png'
 import Cart from './Cart'
 import home from '../images/home.png'
@@ -8,13 +8,13 @@ export default function Header(props) {
 
     const [closeCart, setCloseCart] = useState(true);
     const [openSearch, setOpenSearch] = useState(true);
-    const {total, newTotal, cart, navHome} = props;
+    const { total, newTotal, cart, navHome, onChangeHandler } = props;
 
   return (
       <div id='shop-header'>
         <h2>Fake Shop</h2>
         <div id='buttons'>
-        <Search setOpenSearch={setOpenSearch} openSearch={openSearch} />
+        <Search setOpenSearch={setOpenSearch} openSearch={openSearch} onChangeHandler={onChangeHandler} />
         <div id='home-icon' data-testid='home-icon' onClick={navHome} style={{
                 backgroundImage: `url(${home})`,
                 backgroundSize: 'contain',
