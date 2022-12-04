@@ -195,10 +195,6 @@ body {
     max-height: 300px;
     max-width: 300px;
 }
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
 .title {
     width: 70%;
     font-weight: 900;
@@ -336,5 +332,27 @@ button {
         background-position: 78% 75%;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    /* SHOP */
+    #search-input {
+        width: 100px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    #search-input input {
+        width: 100px;
+    }
+    #cart {
+        min-width: 255px;
+        width: 20%;
+        border: 1px solid black;
+        position: absolute;
+        left: 10%;
+        z-index: 10;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
