@@ -8,8 +8,6 @@ export default function Carousel(props) {
     const backgroundStyle = () => {
         return {
                 backgroundImage: `url(${background})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat'
         }
     }
     
